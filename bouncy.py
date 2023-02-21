@@ -54,8 +54,8 @@ class ship:
         self.nodelen = 4
     def rotateNodes(self):
         for i in range(0,self.nodelen,1):
-            self.nodes[i][0]=cos(self.heading * pi/180)
-            self.nodes[i][1]=sin(self.heading * pi/180)
+            self.nodes[i][0]=cos((self.nodesOrginal[i][0] * self.heading) * pi/180)
+            self.nodes[i][1]=sin((self.nodesOrginal[i][1] * self.heading) * pi/180)
         
         
 class bouncy:
